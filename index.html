@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Pandora - Minecraft Launcher</title>
+        <link rel="icon" type="image/svg+xml" href="pandora_logo.svg" />
+
+        <meta property="og:site_name" content="Pandora - Minecraft Launcher" />
+        <meta
+            name="description"
+            content="Pandora is a launcher that launches Minecraft"
+        />
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "Pandora - Minecraft Launcher",
+              "alternameName": ["Pandora", "Pandora Launcher"]
+              "url": "https://pandora.moulberry.com/"
+            }
+        </script>
+
+        <link data-trunk rel="scss" href="src/static/index.scss" />
+        <link data-trunk rel="copy-file" href="src/static/pandora_main.svg" />
+        <link data-trunk rel="copy-file" href="src/static/pandora_logo.svg" />
+        <base data-trunk-public-url />
+    </head>
+    <body>
+        <link
+            data-trunk
+            rel="rust"
+            href="Cargo.toml"
+            data-wasm-opt="z"
+            data-bin="pandora-frontend"
+        />
+    </body>
+</html>

@@ -1,0 +1,32 @@
+[package]
+name = "pandora-frontend"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+console_error_panic_hook = "0.1"
+wasm-bindgen = "0.2.88"
+log = "0.4.18"
+wasm-logger = "0.2.0"
+ybc = "0.4.0"
+yew = {version = "0.20", features = ["csr"]}
+yew-router = "0.17.0"
+yew-hooks = "0.2.0"
+wasm-cookies = "0.2.1"
+serde = { version = "1.0.164", features = ["rc"] }
+gloo-net = "0.2.6"
+web-sys = "0.3.64"
+uuid = {version = "1.3.4", features = ["serde"]}
+chrono = "0.4.26"
+gloo = "0.8.1"
+thiserror = "2.0.17"
+
+[profile.release]
+# less code to include into binary
+panic = 'abort'
+# optimization over all codebase ( better optimization, slower build )
+codegen-units = 1
+# optimization for size
+opt-level = 'z'
+# link time optimization using using whole-program analysis
+lto = true

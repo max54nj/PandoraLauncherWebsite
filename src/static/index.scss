@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+$primary: #141414;
+$light: #bbbbbb;
+$dark: #0a0a0a;
+$white: #f6f5f4;
+$link: #14532d;
+
+$text: $light;
+$border: #666666;
+$modal-card-head-background-color: #505050;
+$modal-card-body-background-color: #505050;
+$modal-card-title-color: $white;
+
+$dropdown-item-color: $white;
+$dropdown-content-background-color: $dark;
+
+$navbar-background-color: $primary;
+$tabs-link-hover-border-bottom-color: #d677ff;
+$tabs-link-hover-color: #d677ff;
+$tabs-border-bottom-color: transparent;
+$tabs-link-color: $white;
+
+$box-background-color: $dark;
+
+$label-color: $light;
+
+$input-background-color: $primary;
+$input-color: $light;
+
+$tooltip-font-size: 1rem;
+$tooltip-max-width: 20rem;
+
+html {
+    background-color: $dark !important;
+}
+
+span[data-tooltip].tag {
+    border-bottom: none !important;
+}
+
+.hero-banner-text {
+    font-size: 4rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(left, #c170e3, #b160d3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.pagination-ellipsis {
+    background-color: transparent !important;
+}
+
+.button-disabled {
+    background-color: #555 !important;
+    color: #888 !important;
+    border-color: #555 !important;
+}
+
+hr {
+    background-color: #464646 !important;
+    margin: 0 0 0.75rem 0 !important;
+}
+
+
+@import "bulma/bulma.sass";
+@import "bulma-tooltip/sass/index.sass";
